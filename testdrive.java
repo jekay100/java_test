@@ -3,6 +3,7 @@
     > Author: trilever
     > Mail: trilever31204@gmail.com 
     > Created Time: 2014年04月27日 星期日 13时48分33秒
+    >First java push. The use of Java IO class. And how to slit the String into the length you want.
  ************************************************************************/
 import java.io.*;
 class emploryee
