@@ -11,7 +11,7 @@ class sender extends Thread
 	private PipedOutputStream out=new PipedOutputStream();
 	public  PipedOutputStream getPipeOutputStream()
 	{
-				return out;
+		return out;
 	}
 	public void run()
 	{
@@ -34,7 +34,7 @@ class reciever extends Thread
 	private PipedInputStream in=new PipedInputStream();
 	public PipedInputStream getPipeInputStream()
 	{
-				return in;
+		return in;
 	}
 	public void run()
 	{
@@ -59,12 +59,12 @@ public class pipeStreamTestDrive
 {
 	public static void main(String args[])throws Exception
 	{
-	sender s=new sender();
-	reciever r=new reciever();
-	PipedOutputStream outs=s.getPipeOutputStream();
-	PipedInputStream ins=r.getPipeInputStream();
-	outs.connect(ins);
-	s.start();
-	r.start();
+		sender s=new sender();
+		reciever r=new reciever();
+		PipedOutputStream outs=s.getPipeOutputStream();
+		PipedInputStream ins=r.getPipeInputStream();
+		outs.connect(ins);
+		s.start();
+		r.start();
 	}
 }
