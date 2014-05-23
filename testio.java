@@ -12,13 +12,15 @@ public class testio
 	{
 		System.out.println("Input your name:");
 		Scanner in=new Scanner(System.in);
+		while(in.hasNextLine())
+		{
 		String name=in.nextLine();
-	//	System.out.println(name);
-
-		System.out.println("Input your code:");
+		System.out.println(name);
+		}
+	/*	System.out.println("Input your code:");
 		Console inc=System.console();
 		char[] psw=inc.readPassword("passwd");
 		System.out.println(psw);
-
+	*/
 	}
 }
