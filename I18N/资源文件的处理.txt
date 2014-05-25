@@ -1,0 +1,3 @@
+如果资源文件中包含有非西欧字符（中文，日文等），就需要使用native2ascii工具类来处理这个文件，然后才能用。
+Eg：使用这个工具处理资源文件的命令：
+native2ascii Ms_zh_CN.properties mse_zh_CN.properties //将前者处理成后者这个文件。就是将汉字处理成标准的Unicode值。
