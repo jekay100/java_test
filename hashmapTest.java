@@ -63,6 +63,7 @@ public class hashmapTest
 	public static void main(String[] args)
 	{
 		//the use of LinkedHashMap
+		//class String has it's own equals() and hashcode() method.
 		LinkedHashMap<String,Integer> hp = new LinkedHashMap<>();
 		hp.put("张三",90);
 		hp.put("李四",80);
@@ -71,6 +72,7 @@ public class hashmapTest
 		System.out.println(hp);
 
 		//the use of HashMap
+		//class apple do not has it's own equals() and hashcode() method.
 		HashMap<apple,Integer> hp1 = new HashMap<>();
 		hp1.put(new apple("green",4.3),4);
 		hp1.put(new apple("blue",6.7),5);
