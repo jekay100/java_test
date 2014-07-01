@@ -10,6 +10,8 @@ import java.io.*;
 //the class must implements the Serializable interface that it can be serialized
 class user implements Serializable
 {
+	//set the version of the class 
+	static final long serialVersionUID = 1L;
 	private String name;
 	private String password;
 	user()
