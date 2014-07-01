@@ -1,6 +1,6 @@
 /**
  * @file Name: pathTest.java
- * @description:Test the path class
+ * @description:Test the path class and the use of Files tool class
  * @author : trilever
  * @version : 1.0
  * @mail: trilever31204@gmail.com 
