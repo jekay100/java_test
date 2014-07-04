@@ -9,8 +9,12 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import javax.swing.event.*;
 public class SwingJMenuTest
 {
+	public static void save()
+	{
+		}
 	public static void main(String[] args) throws Exception
 	{
 		//construct a container
@@ -22,8 +26,8 @@ public class SwingJMenuTest
 		JMenuBar jmb = new JMenuBar();
 		
 		//construct the menus for the menubar	
-		JMenu jm1 = new JMenu("Files",true);
-		JMenu jm2 = new JMenu("Edit",true);
+		JMenu jm1 = new JMenu("New",true);
+		JMenu jm2 = new JMenu("Save",true);
 		JMenu jm3 = new JMenu("Search",true);
 		JMenu jm4 = new JMenu("Runs",true);
 		JMenu jm5 = new JMenu("Language",true);
@@ -38,8 +42,8 @@ public class SwingJMenuTest
 		JMenuItem jmi2 = new JMenuItem("2");
 		JMenu jmi3 = new JMenu("3");
 		JMenuItem jmi4 = new JMenuItem("4");
-		jmi1.setAccelerator(KeyStroke.getKeyStroke('V',InputEvent.CTRL_DOWN_MASK 
-)); 
+		jmi1.setAccelerator(KeyStroke.getKeyStroke('N',InputEvent.CTRL_DOWN_MASK)); 
+		jmi2.setAccelerator(KeyStroke.getKeyStroke('S',InputEvent.CTRL_DOWN_MASK)); 
 		jm1.add(jmi1); 
 		jm1.add(jmi2);
 		//add separator in the menu
@@ -47,6 +51,7 @@ public class SwingJMenuTest
 		jm1.add(jmi3); 
 		jmi3.add(jmi4); 
 		
+		final JTextArea jta = new JTextArea(60,80);
 		//add ActionListener for the menuitem
 		jmi1.addActionListener(new ActionListener()
 		{
@@ -55,6 +60,23 @@ public class SwingJMenuTest
 				System.out.println("hi");
 			}
 		});
+		   boolean isModified = false;
+		jta.getDocument().addDocumentListener(new DocumentListener(){
+			
+			public void changedUpdate(DocumentEvent e) 
+			{
+			}
+			public void insertUpdate(DocumentEvent e) 
+			{
+				System.out.println("insert");
+			}
+			public void removeUpdate(DocumentEvent e) 
+			{
+				System.out.println("remove");
+			}
+		});
+		
+		MainFrame.add(jta,BorderLayout.CENTER);
 		//add the menubar onto the frame
 		MainFrame.setJMenuBar(jmb);
 		MainFrame.setVisible(true);
