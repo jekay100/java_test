@@ -64,7 +64,7 @@
 		}
 		public static void main(String[] args)
 		{
-			//use the new object to use the non-static method and field
+			//use the new object to use the non-static method and field in the static method
 			new AWTDrawingTest().init();	
 		}
 	}  
