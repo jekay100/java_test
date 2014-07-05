@@ -28,7 +28,7 @@
 
 				if(shapeToDraw.equals(OVAL_shape)==true)
 				{
-					g.drawOval(rand.nextInt(200),rand.nextInt(200),50,50); 	
+					g.drawOval(rand.nextInt(200),rand.nextInt(200),50,40); 	
 				}
 			}
 		}
