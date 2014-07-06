@@ -13,7 +13,7 @@ import javax.swing.*;
 
 public class AWTPinBallTest
 {
-	Frame f = new Frame("PingPong Ball. Version 1.0 By trilever");
+	JFrame f = new JFrame("PingPong Ball. Version 1.0 By trilever");
 	MyCanvas tableArea = new MyCanvas();
 	
 	//the size of the table
@@ -28,9 +28,9 @@ public class AWTPinBallTest
 	int racketHeight=tableY-racketY;
 
 	//the default speed of the ball
-	int speedY=20;
+	int speedY=5;
 	Random rand = new Random();
-	int speedX=rand.nextInt(20);
+	int speedX=rand.nextInt(5);
 
 	//the default pos of the ball
 	int ballX=40;
@@ -39,7 +39,7 @@ public class AWTPinBallTest
 	
 	javax.swing.Timer timer;
 	boolean gameIsOver=false;
-	class MyCanvas extends Canvas
+	class MyCanvas extends JPanel
 	{
 		public void paint(Graphics g)
 		{
@@ -120,7 +120,7 @@ public class AWTPinBallTest
 				tableArea.repaint();
 			}
 		};
-		timer = new javax.swing.Timer(100,al);
+		timer = new javax.swing.Timer(10,al);
 		timer.start();
 		f.pack();
 		f.setVisible(true);
