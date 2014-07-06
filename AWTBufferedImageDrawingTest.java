@@ -24,7 +24,6 @@
 			public void paint(Graphics g) 
 			{
 				g.drawImage(Image,0,0,null);
-					System.out.println("g");
 			}
 		}
 
