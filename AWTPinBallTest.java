@@ -39,7 +39,7 @@ public class AWTPinBallTest
 	
 	javax.swing.Timer timer;
 	boolean gameIsOver=false;
-	class MyCanvas extends JPanel
+	class MyCanvas extends Canvas
 	{
 		public void paint(Graphics g)
 		{
@@ -120,7 +120,7 @@ public class AWTPinBallTest
 				tableArea.repaint();
 			}
 		};
-		timer = new javax.swing.Timer(10,al);
+		timer = new javax.swing.Timer(100,al);
 		timer.start();
 		f.pack();
 		f.setVisible(true);
