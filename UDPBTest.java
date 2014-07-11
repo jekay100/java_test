@@ -21,8 +21,9 @@ public class UDPBTest
 			String content = null;
 			while((content=br.readLine())!=null)
 			{
-				InetAddress iaa = InetAddress.getByAddress(new byte[]{10,23,96,124});
+				InetAddress iaa = InetAddress.getByAddress(new byte[]{10,23,94,(byte)253});
 				//construct a DatagramPacket, it is aimed at storing the data which will be transmitted by DatagramSocket,with server's address and port.
+				//the DatagramPacket should has the address and the port it aimed at
 				DatagramPacket dgp = new DatagramPacket(content.getBytes(),content.length(),iaa,Server_PORT); 
 				//send the data
 				dgs.send(dgp); 

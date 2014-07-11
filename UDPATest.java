@@ -26,7 +26,6 @@ public class UDPATest
 				System.out.println(new String(dgp.getData(),0,dgp.getLength()));
 			}
 		}
-		
 		catch(Exception e)
 		{
 			System.out.println("error");
