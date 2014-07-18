@@ -12,7 +12,7 @@ public class Arvil
 		Iboys.add(new Jim());
 		Iboys.add(new Lilei());
 	}
-	//产生事件
+	//产生事件，也即是被观察者状态的改变
 	public void setEvent(int i)
 	{
 		e.happy=i;
