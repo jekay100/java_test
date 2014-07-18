@@ -2,11 +2,10 @@
     > File Name: abstractTestDrive.java
     > Author: trilever
     > Version: 1.0
-    > Mail: trilever31204@gmail.com 
+    > Mail: trilever31204@gmail.com
     > Created Time: 2014-5-7 17:46:50
 	  > This program test the feature of abstract.
  ************************************************************************/
-
 abstract class person
 {
 	public String getName()

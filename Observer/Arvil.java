@@ -1,18 +1,26 @@
+/*************************************************************************
+	> File Name: Arvil.java
+	> Author: trilever
+	> Version: 1.0
+	> Mail: trilever31204@gmail.com
+	> Created Time: 2014-7-18 14:52:50
+	> This program test the Arivl.
+************************************************************************/
 package com.trilever;
 import java.util.LinkedList;
 import java.util.List;
 public class Arvil
 {
-	//ÊÂ¼þ±¾Éí
+	//ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	Event e = new Event();
 	List<Iboy> Iboys = new LinkedList<>();
-	//×¢²á¹Û²ìÕß
+	//×¢ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½
 	public void addListenner()
 	{
 		Iboys.add(new Jim());
 		Iboys.add(new Lilei());
 	}
-	//²úÉúÊÂ¼þ£¬Ò²¼´ÊÇ±»¹Û²ìÕß×´Ì¬µÄ¸Ä±ä
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ç±ï¿½ï¿½Û²ï¿½ï¿½ï¿½×´Ì¬ï¿½Ä¸Ä±ï¿½
 	public void setEvent(int i)
 	{
 		e.happy=i;

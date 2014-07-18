@@ -1,5 +1,13 @@
+/*************************************************************************
+	> File Name: DAOTest.java
+	> Author: trilever
+	> Version: 1.0
+	> Mail: trilever31204@gmail.com
+	> Created Time: 2014-7-18 14:52:50
+	> This program test the DAOTest.
+************************************************************************/
 /*
- * ±¾Àà¾ÍÊÇDAO²ãµÄ²âÊÔÀà
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DAOï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 package com.trilever.daoTest;
 import java.sql.SQLException;

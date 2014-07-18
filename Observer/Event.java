@@ -1,5 +1,13 @@
+/*************************************************************************
+	> File Name: Event.java
+	> Author: trilever
+	> Version: 1.0
+	> Mail: trilever31204@gmail.com
+	> Created Time: 2014-7-18 14:52:50
+	> This program test the Event.
+************************************************************************/
 package com.trilever;
-//事件对象，对事件的封装，目的是提供给观察者。
+//锟铰硷拷锟斤拷锟襟，讹拷锟铰硷拷锟侥凤拷装锟斤拷目锟斤拷锟斤拷锟结供锟斤拷锟桔诧拷锟竭★拷
 public class Event
 {
 	int happy = 0;

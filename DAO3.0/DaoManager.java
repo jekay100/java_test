@@ -1,5 +1,13 @@
+/*************************************************************************
+	> File Name: DaoManager.java
+	> Author: trilever
+	> Version: 1.0
+	> Mail: trilever31204@gmail.com
+	> Created Time: 2014-7-18 14:52:50
+	> This program test the DaoManager.
+************************************************************************/
 /*
- * 本类就是DAO层增、删、改、查各方法的具体实现
+ * 锟斤拷锟斤拷锟斤拷锟斤拷DAO锟斤拷锟斤拷锟斤拷删锟斤拷锟侥★拷锟斤拷锟襟方凤拷锟侥撅拷锟斤拷实锟斤拷
  */
 package com.trilever.DAOManager;
 import java.sql.Connection;
@@ -26,9 +34,9 @@ public class DaoManager
 	{
 		try
 		{
-			// 装载、注册类
+			// 装锟截★拷注锟斤拷锟斤拷
 			Class.forName(driver);
-			// 修建Java应用程序与数据库之间连接的路径
+			// 锟睫斤拷Java应锟矫筹拷锟斤拷锟斤拷锟斤拷锟捷匡拷之锟斤拷锟斤拷锟接碉拷路锟斤拷
 			conn = DriverManager.getConnection(url, user, password);
 			if (!conn.isClosed())
 			{
@@ -36,12 +44,12 @@ public class DaoManager
 			}
 			past = conn.prepareStatement(sql);
 			past.setInt(1, id);
-			// 执行sql查询语句
+			// 执锟斤拷sql锟斤拷询锟斤拷锟斤拷
 			rs = past.executeQuery();
 		} catch (ClassNotFoundException e)
 		{
 			e.printStackTrace();
-			System.out.println("包没有找到");
+			System.out.println("锟斤拷没锟斤拷锟揭碉拷");
 		}
 		return rs;
 	}
@@ -51,16 +59,16 @@ public class DaoManager
 		List<Student> lstu = new LinkedList<>();
 		try
 		{
-			// 装载、注册类
+			// 装锟截★拷注锟斤拷锟斤拷
 			Class.forName(driver);
-			// 修建Java应用程序与数据库之间连接的路径
+			// 锟睫斤拷Java应锟矫筹拷锟斤拷锟斤拷锟斤拷锟捷匡拷之锟斤拷锟斤拷锟接碉拷路锟斤拷
 			conn = DriverManager.getConnection(url, user, password);
 			if (!conn.isClosed())
 			{
 				System.out.println("connects succees!");
 			}
 			past = conn.prepareStatement(sql);
-			// 执行sql查询语句
+			// 执锟斤拷sql锟斤拷询锟斤拷锟斤拷
 			rs = past.executeQuery();
 			while (rs.next())
 			{
@@ -69,7 +77,7 @@ public class DaoManager
 		} catch (ClassNotFoundException e)
 		{
 			e.printStackTrace();
-			System.out.println("包没有找到");
+			System.out.println("锟斤拷没锟斤拷锟揭碉拷");
 		}
 		return lstu;
 	}
@@ -78,9 +86,9 @@ public class DaoManager
 	{
 		try
 		{
-			// 装载、注册类
+			// 装锟截★拷注锟斤拷锟斤拷
 			Class.forName(driver);
-			// 修建Java应用程序与数据库之间连接的路径
+			// 锟睫斤拷Java应锟矫筹拷锟斤拷锟斤拷锟斤拷锟捷匡拷之锟斤拷锟斤拷锟接碉拷路锟斤拷
 			conn = DriverManager.getConnection(url, user, password);
 			if (!conn.isClosed())
 			{
@@ -91,12 +99,12 @@ public class DaoManager
 			{
 				past.setObject(i + 1, obs[i]);
 			}
-			// 执行sql查询语句
+			// 执锟斤拷sql锟斤拷询锟斤拷锟斤拷
 			row = past.executeUpdate();
 		} catch (ClassNotFoundException e)
 		{
 			e.printStackTrace();
-			System.out.println("包没有找到");
+			System.out.println("锟斤拷没锟斤拷锟揭碉拷");
 		} finally
 		{
 			this.closeFunc();
@@ -108,9 +116,9 @@ public class DaoManager
 	{
 		try
 		{
-			// 装载、注册类
+			// 装锟截★拷注锟斤拷锟斤拷
 			Class.forName(driver);
-			// 修建Java应用程序与数据库之间连接的路径
+			// 锟睫斤拷Java应锟矫筹拷锟斤拷锟斤拷锟斤拷锟捷匡拷之锟斤拷锟斤拷锟接碉拷路锟斤拷
 			conn = DriverManager.getConnection(url, user, password);
 			if (!conn.isClosed())
 			{
@@ -118,12 +126,12 @@ public class DaoManager
 			}
 			past = conn.prepareStatement(sql);
 			past.setInt(1, id);
-			// 执行sql查询语句
+			// 执锟斤拷sql锟斤拷询锟斤拷锟斤拷
 			row = past.executeUpdate();
 		} catch (ClassNotFoundException e)
 		{
 			e.printStackTrace();
-			System.out.println("包没有找到");
+			System.out.println("锟斤拷没锟斤拷锟揭碉拷");
 		} finally
 		{
 			this.closeFunc();
@@ -135,9 +143,9 @@ public class DaoManager
 	{
 		try
 		{
-			// 装载、注册类
+			// 装锟截★拷注锟斤拷锟斤拷
 			Class.forName(driver);
-			// 修建Java应用程序与数据库之间连接的路径
+			// 锟睫斤拷Java应锟矫筹拷锟斤拷锟斤拷锟斤拷锟捷匡拷之锟斤拷锟斤拷锟接碉拷路锟斤拷
 			conn = DriverManager.getConnection(url, user, password);
 			if (!conn.isClosed())
 			{
@@ -148,12 +156,12 @@ public class DaoManager
 			{
 				past.setObject(i + 1, obs[i]);
 			}
-			// 执行sql查询语句
+			// 执锟斤拷sql锟斤拷询锟斤拷锟斤拷
 			row = past.executeUpdate();
 		} catch (ClassNotFoundException e)
 		{
 			e.printStackTrace();
-			System.out.println("包没有找到");
+			System.out.println("锟斤拷没锟斤拷锟揭碉拷");
 		} finally
 		{
 			this.closeFunc();
@@ -161,7 +169,7 @@ public class DaoManager
 		return row;
 	}
 
-	// 对于数据库的查询，返回的结果集ResultSet，在使用完结果集之前不能关闭该结果集，所以要专门用一个方法来专门关闭结果集。
+	// 锟斤拷锟斤拷锟斤拷锟捷匡拷锟侥诧拷询锟斤拷锟斤拷锟截的斤拷锟斤拷锟斤拷ResultSet锟斤拷锟斤拷使锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷之前锟斤拷锟杰关闭该斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷要专锟斤拷锟斤拷一锟津方凤拷锟斤拷专锟脚关闭斤拷锟斤拷锟斤拷锟斤拷
 	public void closeFunc()
 	{
 		try
@@ -184,7 +192,7 @@ public class DaoManager
 		} catch (Exception e2)
 		{
 			e2.printStackTrace();
-			System.out.println("关闭失误！");
+			System.out.println("锟截憋拷失锟斤拷锟斤拷");
 		}
 	}
 }

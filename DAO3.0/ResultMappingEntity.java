@@ -1,3 +1,11 @@
+/*************************************************************************
+	> File Name: ResultMappingEntity.java
+	> Author: trilever
+	> Version: 1.0
+	> Mail: trilever31204@gmail.com
+	> Created Time: 2014-7-18 14:52:50
+	> This program test the ResultMappingEntity.
+************************************************************************/
 package com.trilever.DAOManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +20,7 @@ public class ResultMappingEntity implements ResultMappingtoEntity
 {
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * com.trilever.DAOManager.ResultMappingEntity#MappingResultEntity(java.
 	 * sql.ResultSet)

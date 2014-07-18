@@ -1,5 +1,13 @@
+/*************************************************************************
+	> File Name: DAOTest.java
+	> Author: trilever
+	> Version: 1.0
+	> Mail: trilever31204@gmail.com
+	> Created Time: 2014-7-18 14:52:50
+	> This program test the DAOTest.
+************************************************************************/
 /*
- * ±¾Àà¾ÍÊÇDAO²ãµÄ²âÊÔÀà
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DAOï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 package com.trilever.daoTest;
 
@@ -23,9 +31,9 @@ public class DAOTest
 		boolean result = stuD.add(stu);
 		if (result == true)
 		{
-			System.out.println("Ôö¼ÓÊý¾Ý³É¹¦");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý³É¹ï¿½");
 		} else
-			System.out.println("Ôö¼ÓÊý¾ÝÊ§°Ü");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
 	}
 
 	public void deleteTest() throws SQLException
@@ -35,9 +43,9 @@ public class DAOTest
 		boolean result = stuD.delete(id);
 		if (result == true)
 		{
-			System.out.println("„h³ýÊý¾Ý³É¹¦");
+			System.out.println("ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½Ý³É¹ï¿½");
 		} else
-			System.out.println("„h³ýÊý¾ÝÊ§°Ü");
+			System.out.println("ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
 	}
 
 	public void updateTest() throws SQLException
@@ -47,9 +55,9 @@ public class DAOTest
 		boolean result = stuD.update(stu);
 		if (result == true)
 		{
-			System.out.println("ÐÞ¸ÄÊý¾Ý³É¹¦");
+			System.out.println("ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½Ý³É¹ï¿½");
 		} else
-			System.out.println("ÐÞ¸ÄÊý¾ÝÊ§°Ü");
+			System.out.println("ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
 	}
 
 	public void findTest() throws SQLException

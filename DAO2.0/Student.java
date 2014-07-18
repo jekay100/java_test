@@ -1,8 +1,16 @@
+/*************************************************************************
+	> File Name: Student.java
+	> Author: trilever
+	> Version: 1.0
+	> Mail: trilever31204@gmail.com
+	> Created Time: 2014-7-18 14:52:50
+	> This program test the Student.
+************************************************************************/
 package com.trilever.entity;
 
 /**
  * @author trilever
- * 
+ *
  */
 public class Student
 {
@@ -60,7 +68,7 @@ public class Student
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -73,7 +81,7 @@ public class Student
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override

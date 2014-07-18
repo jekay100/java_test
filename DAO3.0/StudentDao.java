@@ -1,5 +1,13 @@
+/*************************************************************************
+> File Name: StudentDaojava
+> Author: trilever
+> Version: 1.0
+> Mail: trilever31204@gmail.com
+> Created Time: 2014-7-18 14:52:50
+> This program test the StudentDao.
+************************************************************************/
 /*
- * 本类即是针对于student表的DAO层，主要提供功能就是数据的增删改查。
+ * 锟斤拷锟洁即锟斤拷锟斤拷锟斤拷锟斤拷student锟斤拷锟斤拷DAO锟姐，锟斤拷要锟结供锟斤拷锟杰撅拷锟斤拷锟斤拷锟捷碉拷锟斤拷删锟侥查。
  */
 package com.trilever.DAO;
 import java.sql.*;
@@ -65,7 +73,7 @@ public class StudentDao
 			stu.setTeachId(mk.getInt("teachId"));
 			stu.setGroup_Id(mk.getInt("group_Id"));
 		}
-		// 对于查询而言，不能再使用结果集之前就关闭了结果集，所以要在DaoManager类中增加一个closeFunc()方法，以用于在使用了结果集ResultSet之后再关闭它
+		// 锟斤拷锟节诧拷询锟斤拷锟皆ｏ拷锟斤拷锟斤拷锟斤拷使锟矫斤拷锟斤拷锟斤拷之前锟酵关憋拷锟剿斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷DaoManager锟斤拷锟斤拷锟斤拷锟斤拷一锟斤拷closeFunc()锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷使锟斤拷锟剿斤拷锟斤拷锟斤拷ResultSet之锟斤拷锟劫关憋拷锟斤拷
 		fdm.closeFunc();
 		return stu;
 	}
@@ -75,7 +83,7 @@ public class StudentDao
 		String sql = "select * from student";
 		DaoManager fdm = new DaoManager();
 		List<Student> mk = fdm.findAllManager(sql);
-		// 对于查询而言，不能再使用结果集之前就关闭了结果集，所以要在DaoManager类中增加一个closeFunc()方法，以用于在使用了结果集ResultSet之后再关闭它
+		// 锟斤拷锟节诧拷询锟斤拷锟皆ｏ拷锟斤拷锟斤拷锟斤拷使锟矫斤拷锟斤拷锟斤拷之前锟酵关憋拷锟剿斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷DaoManager锟斤拷锟斤拷锟斤拷锟斤拷一锟斤拷closeFunc()锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷使锟斤拷锟剿斤拷锟斤拷锟斤拷ResultSet之锟斤拷锟劫关憋拷锟斤拷
 		fdm.closeFunc();
 		return mk;
 	}
