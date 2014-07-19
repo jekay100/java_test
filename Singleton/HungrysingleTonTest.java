@@ -9,6 +9,7 @@
 class HungrysingleTon
 {
 	public int a = 10;
+	
 	private HungrysingleTon() //创建private构造器，防止JDK自己创建构造器
 	{
 	}

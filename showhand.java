@@ -3,7 +3,7 @@
  * @description:
  * @author : trilever
  * @version : 1.0
- * @mail: trilever31204@gmail.com 
+ * @mail: trilever31204@gmail.com
  * @created Time: 2014-5-29 9:01:50
  * this program has arrived to the step of delieved the cards
  */
@@ -15,7 +15,7 @@ class card implements Comparable<card>
 
 	//number of the card
 	private String numb;
-	
+
 	//initializer
 	public card()
 	{
@@ -28,14 +28,14 @@ class card implements Comparable<card>
 		this.color = acolor;
 		this.numb = anumb;
 	}
-	
+
 	//print the card
 	public String g()
 	{
 		String str=this.color+this.numb;
 		return str;
 	}
-	
+
 	public int compareTo(card c)
 	{
 		if(arraysUtil.find(showhand.numbs,this.numb)>arraysUtil.find(showhand.numbs,c.numb))
@@ -67,9 +67,10 @@ class card implements Comparable<card>
 	}
 }
 
-//find the index of the elem in the array 
+//find the index of the elem in the array
 class arraysUtil
 {
+	
 	static int find(String[] strArrays,String str)
 	{
 		int len = strArrays.length;
@@ -111,10 +112,10 @@ class player
 	{
 		this.cards.add(acard);
 	}
-	
+
 	public String showCards()
 	{
-		String str="cards:"+"®Å";
+		String str="cards:"+"ÔøΩÔøΩ";
 		for(int i=1;i<cards.size();i++)
 		{
 			 str = str.concat(" ").concat(cards.get(i).g());
@@ -136,9 +137,9 @@ public class showhand
 	final static int MAX_PLAYER_NUM=5;
 	final static int MIN_PLAYER_NUM=2;
 	//the inf of the cards
-	final static String[] cols = new String[]{"∫ÏÃ“","∫⁄Ã“","∑ΩøÈ","√∑ª®"};
+	final static String[] cols = new String[]{"ÔøΩÔøΩÔøΩÔøΩ","ÔøΩÔøΩÔøΩÔøΩ","ÔøΩÔøΩÔøΩÔøΩ","√∑ÔøΩÔøΩ"};
 	final static String[] numbs = new String[]{"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
-	
+
 	//the cardslist will be delivered
 	final static LinkedList<card> CardsList = new LinkedList<>();
 	//the plyerlist in the game
@@ -148,7 +149,7 @@ public class showhand
 	public void initCards()
 	{
 		CardsList.clear();
-		//initia the cardslist 
+		//initia the cardslist
 		for(int i = 0;i<4;i++)
 			for(int j = 0;j<13;j++)
 			{
@@ -157,7 +158,7 @@ public class showhand
 			}
 		//shuffle the cards
 		Collections.shuffle(CardsList);
-	
+
 //		for(card m:CardsList)
 //		{
 //			System.out.println(m.g());
@@ -183,7 +184,7 @@ public class showhand
 			}
 		}
 	}
-	
+
 	//deliver the card form the player No. pos
 	public void deliverCard(int pos)
 	{
@@ -201,22 +202,22 @@ public class showhand
 		//initia the cardlist
 		sh.initCards();
 		//initia the plyerlist
-		String[] str = new String[]{"’≈»˝","¿ÓÀƒ","ÕıŒÂ","’‘¡˘"};
+		String[] str = new String[]{"ÔøΩÔøΩÔøΩÔøΩ","ÔøΩÔøΩÔøΩÔøΩ","ÔøΩÔøΩÔøΩÔøΩ","ÔøΩÔøΩÔøΩÔøΩ"};
 		sh.initPlayers(str);
 		System.out.println(CardsList.get(0).g());
 		System.out.println(CardsList.get(1).g());
 		System.out.println(CardsList.get(0).compareTo(CardsList.get(1)));
-		
+
 		sh.deliverCard(0);
 		sh.deliverCard(0);
 		sh.deliverCard(0);
 		sh.deliverCard(0);
 		sh.deliverCard(0);
 		playerList.get(0).f();
-		
+
 //		sh.deliverCard(1);
 		playerList.get(1).f();
-//		
+//
 //		sh.deliverCard(2);
 		playerList.get(2).f();
 //
