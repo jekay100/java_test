@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="description" content="The Calculator designed by trilever"/>
+<title>Calculator</title>
+<script type="text/javascript">
+	function f(v)
+	{
+		var s1 = parseFloat(document.Cal.Num1.value);
+		var s2 = parseFloat(document.Cal.Num2.value);
+		var rst;
+		if(checkData()==false)
+		{
+			return;
+		}
+		
+		switch (v)
+		{
+			case "+":
+			{
+				rst=(s1+s2);
+				break;
+			}
+			case "-":
+			{
+				rst=(s1-s2);
+				break;
+			}
+			case "*":
+			{
+				rst=(s1*s2);
+				break;
+			}
+			case "/":
+			{
+				rst=(s1/s2);
+				checkData("/");
+				break;
+			}
+			case "%":
+			{
+				rst=(s1%s2);
+				break;
+			}
+		}
+		document.Cal.rst.value=rst;
+	}
+	function checkData(v)
+	{
+		if(document.Cal.Num1.value == "")
+		{
+			alert ("第一个数不能是空");
+			return false;
+		}
+		if(document.Cal.Num2.value == "")
+		{
+			alert ("第二个数不能是空");
+			return false;
+		}
+		if(isNaN(document.Cal.Num1.value))
+		{
+			alert ("第一个数不是数字");
+			return false;
+		}
+		if(isNaN(document.Cal.Num2.value))
+		{
+			alert ("第二个数不是数字");
+			return false;
+		}
+		if(v=="/"&&document.Cal.Num2.value==0)
+		{
+			alert("被除数不能为零")
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+
+<body>
+	<form name="Cal" align="Center"/>
+    Num1:<input type="text" name="Num1" value = "0"/><br/>
+    Num2:<input type="text" value= "0" name="Num2"/><br/>
+    Result:<input type="text" value="0" name="rst"/><br />
+    <input type="button" name="jia" value="+" onclick= "f('+')"/>
+    <input type="button" name="jian" value="-" onclick= "f('-')"/>
+    <input type="button" name="cheng" value="*" onclick= "f('*')"/>
+    <input type="button" name="chu" value="/" onclick= "f('/')"/>
+    <input type="button" name="yu" value="%" onclick= "f('%')"/>
+    </form>
+</body>
+</html>
