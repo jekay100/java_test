@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript">
+	function addImg()
+	{
+		var Img = document.createElement("img");
+		Img.src="./pig.gif";
+		var MyDiv = document.getElementById("MyDiv");
+		MyDiv.appendChild(Img);
+	}
+	function delImg()
+	{
+		var MyDiv = document.getElementById("MyDiv");
+		MyDiv.removeChild(MyDiv.lastChild);
+	}
+</script>
+</head>
+
+<body>
+<div id="MyDiv">
+	<input type="button" onClick="addImg()" value="add">
+    <input type="button" onClick="delImg()" value="delete">
+    
+</div>
+</body>
+</html>
